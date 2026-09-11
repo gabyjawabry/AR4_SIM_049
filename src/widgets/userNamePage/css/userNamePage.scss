@@ -1,0 +1,65 @@
+.unp-component-container{
+    background-image: url(../images/background_01.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    .typeinInputField{
+        padding: 12px;
+        border-radius: 15px;
+        border: 3px solid #485465;
+        position: relative;
+        z-index: 10;
+        width: 592px;
+        height: 81px;
+        font-size: 42px;
+        text-align: right;
+        padding-right: 25px;
+        color: #9198a3;
+        background-color: #f4f5f7;
+    }
+    .mainTypeNameHolder {
+        width: 1080px;
+        height: 430px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 6px 14px rgba(72, 84, 101, 0.15);
+    }
+    .mainTextInputHolder{
+        font-size: 42px;
+        font-family: var(--AbdoLineRegular);
+        padding: 20px;
+        gap: 65px;
+        padding-top: 43px;
+        line-height: 137px;
+        display: flex;
+        justify-content: center;
+    }
+    span.typeNameHolderText {
+        margin-left: 9px;
+        color: #00485e;
+    }
+    .questionText {
+        display: flex;
+    }
+    .next-screen-btn {
+        border: 6px solid #70BF42;
+        border-radius: 36px;
+        background-color: #D4EBC6;
+        height: 72px;
+        color: #2D4C1A;
+        font-size: 46px;
+        width:157px;
+        // padding: 5px 45px 0 45px;
+        font-family: var(--AbdoLineBold);
+        box-shadow: 0 4px rgba(72, 84, 101, 0.1019607843);
+        transition: border-color 0.25s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            border-color: #D4EBC6;
+            background-color: #F1F9EC;
+            color: #2D4C1A;
+        }
+    }
+}

@@ -1,0 +1,276 @@
+.toc-container {
+  // padding-top: 48px;
+  // width: 70%;
+.mainQuestionHolder {
+    width: 1333px;
+    min-height: 115px;
+        position: absolute;
+    right: 137px;
+    top: 48px;
+}
+
+  // .swiper-button-prev{
+  //   background-image: url(../images/nav-right.svg);
+  //   background-repeat: no-repeat;
+  //   background-position: right;
+  //   width: 80px;
+  //   height: 80px;
+  //   svg{
+  //     display: none;
+  //   }
+  // }
+  // .swiper-button-next{
+  //   background-image: url(../images/nav-left.svg);
+  //   background-repeat: no-repeat;
+  //   background-position: left;
+  //   width: 80px;
+  //   height: 80px;
+  //   svg{
+  //     display: none;
+  //   }
+  // }
+}
+.toc-component-container{
+  background-image: url(../../../container/images/toc_bg.png);
+}
+.toc-title {
+    font-size: 38px;
+    color: #000000;
+    // position: absolute;
+    // top: 110px;
+    width: auto;
+    padding: 0 90px;
+    height: 120px;
+    border: 3px solid #33C5F0;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 16, 100, 0.8);
+  }
+  .toc-swiper{
+    height: 480px;
+    // padding-top: 160px;
+  }
+.toc-slide {
+  transition: all 0.3s ease;
+  opacity: 1;
+  position: relative;
+
+}
+.toc-slides-holder{
+  column-gap: 82px;
+}
+
+.toc-slide.active {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.toc-slide.disabled {
+  // opacity: 0.3;
+  pointer-events: none;
+}
+.swiper-slide.toc-slide.d-flex.flex-column.align-items-center.justify-content-center.enabled {
+    opacity: 1 !important;
+}
+.card-wrapper {
+    width: 480px;
+    height: 564px;
+    border: 4px solid #9198a3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.8);
+    color: #000;
+    z-index: 222;
+        // filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.3));
+    }
+.slide-title.text-center.pt-2.col {
+font-size: 50px;
+    color: #00495e;
+    position: absolute;
+    bottom: 19px;
+    background-color: #dadde0;
+    width: 412px;
+    height: 87px;
+    border-radius: 10px;
+    border: 3px solid #b6bbc1;
+    line-height: 61px;
+  }
+
+// .card-wrapper.correct .slide-title.text-center.pt-2.col {
+//     border: 3px solid #70bf42;
+//     background-color:#d4ebc6 ;
+//     color:#2d4c1a;
+// }
+// .card-wrapper.incorrect .slide-title.text-center.pt-2.col {
+//     border: 3px solid #EDB137;
+//     background: #FFE2B2;
+//     color: #665410;
+// }
+
+
+
+.toc-image {
+      width: auto;
+      height: 100%;
+}
+.card-image-holder {
+    height: 414px;
+    width: 414px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #492a78;
+    border: 3px solid #9198a3;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 55px;
+}
+.locked-overlay {
+position: absolute;
+    width: 48px;
+    height: 57px;
+    left: 47px;
+    top: 34px;
+
+}
+.toc-slides-holder {
+    height: 100%;
+}
+.card-wrapper-holder:not(:has(.locked-overlay)) {
+  cursor:pointer;
+  transition: transform 0.3s ease;
+}
+.card-wrapper-holder:not(:has(.locked-overlay)):hover {
+ transform:scale(1.05);
+  // .shadow-overlay{
+  //    transform:scale(1.08);
+  // }
+}
+// .card-wrapper.correct {
+//     border: 4px solid #70bf42;
+// }
+// .card-wrapper.incorrect {
+//     border: 4px solid #EDB137;
+// }
+.toc-button-container{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    .toc-try-again-button{
+      background-color: #FFE2B2;
+      border: 5px solid #FFA000;
+      border-radius: 15px;
+      color: #664000;
+      font-size: 38px;
+      padding: 0 25px;
+      font-family: var(--AbdoLineBold);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 103px;
+      cursor: pointer;
+      transition: color .4s ease-in-out, background-color .4s ease-in-out, border .4s ease-in-out, border-radius .4s ease-in-out;
+      &:hover{
+        background-color: #FFE2B2;
+        border: 5px solid #FFA000;
+        color: #664000;
+      }
+    }
+    .toc-results-button{
+      font-family: var(--AbdoLineBold);
+      color: #2D4C1A;
+      font-size: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #D4EBC6;
+      border-radius: 50px;
+      border: 5px solid #ffffff;
+      height: 103px;
+      padding: 0 45px;
+      cursor: pointer;
+      transition: color .4s ease-in-out, background-color .4s ease-in-out, border .4s ease-in-out, border-radius .4s ease-in-out;
+    }
+}
+.card-wrapper-holder.activated{
+.card-wrapper {
+    border: 4px solid #047fff;
+}
+.card-image-holder {
+    border: 3px solid #047fff;
+}
+.slide-title.text-center.pt-2.col {
+    background-color: #e5f7fd;
+    border: 3px solid #047fff;
+}
+}
+
+
+.card-wrapper-holder.missionDone{
+.card-wrapper {
+    border: 4px solid #70bf42;
+}
+.card-image-holder {
+    border: 3px solid #70bf42;
+}
+.slide-title.text-center.pt-2.col {
+    background-color: #d4ebc6;
+    border: 3px solid #70bf42;
+}
+}
+
+
+
+.achievement-btn-holder {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    width: 222px;
+    height: 103px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+      button {
+        width: 222px;
+        height: 103px;
+        border-radius: 69px;
+        background-color: #D4EBC6;
+        border: 5px solid #fff;
+        color: #2d4c1a;
+        font-size: 65px;
+      }
+}
+.next-btn-arrow
+ {
+    position: absolute;
+    width: 46px;
+    right: 496px;
+    top: 267px;
+}
+.shadow-overlay svg {
+width: 443  px;
+    position: absolute;
+    bottom: -20px;
+    right: 16px;
+    z-index: 1;
+}
+.toc-component-container .mainQuestionHolderDiv {
+    margin-bottom: 66px;
+}
+.correct-icon {
+    position: absolute;
+    width: 56px;
+    height: 55px;
+    left: 38px;
+    top: 34px;
+}
+.audio-icon-container button.disabled{
+    pointer-events: none;
+  }

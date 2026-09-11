@@ -1,0 +1,509 @@
+{
+  "question": {
+    "Question_1": {
+      "type": "videoPlayer",
+      "id": "Question_1",
+      "videoData": {
+        "id": "introVideo",
+        "url": "videos/page2/AR4_LO_049_SIM_Intro.mp4",
+        "poster": "videos/page2/AR4_LO_049_SIM_Intro_thumbnail.png",
+        "preview": false,
+        "autoplay": false,
+        "showVideoControls": false,
+        "showEndOverlay": true,
+        "controls": {
+          "control_bar": true,
+          "cc": false,
+          "show_duration": false,
+          "show_time": false,
+          "volume_control": true,
+          "seekbar": true,
+          "download": false,
+          "audio_description": false,
+          "fullscreen": true,
+          "transcript": false,
+          "video_speed": true
+        }
+      }
+    },
+    "Question_2": {
+      "type": "userNamePage",
+      "content": {
+        "id": "userNamePage",
+        "mainQuestion": "اكتبْ اسمَكَ لِتبدأَ قِيادَةَ الرِّحْلَةِ، ثمَّ انقرْ على زرِّ تأكيدٍ:",
+        "inputLabel": "الاسم:",
+        "mainQuestionAudio": "audio/page2/audio_2_1.mp3"
+      }
+    },
+    "Question_3": {
+      "type": "welcomeUser",
+      "content": {
+        "mainQuestion": "مرحبًا بك يا:"
+      }
+    },
+    "Question_4": {
+      "type": "chooseAvatarPage",
+      "content": {
+        "id": "avatarPage",
+        "mainQuestion": "اخترِ الشّخصيّةَ الّتي سَتُمَثِّلُكَ في قيادةِ الرِّحْلَةِ.",
+        "mainQuestionAudio": "audio/page4/audio_4_1.mp3",
+        "avatars": [
+          {
+            "id": "avatar01",
+            "image": "images/avatar01.png",
+            "name": "Avatar 1"
+          },
+          {
+            "id": "avatar02",
+            "image": "images/avatar02.png",
+            "name": "Avatar 2"
+          }
+        ]
+      }
+    },
+    "Question_5": {
+      "type": "avatarPage",
+      "content": {
+        "mainQuestion": "اختيارٌ موفَّقٌ",
+        "mainQuestionAudio": "audio/page5/audio_5_1.mp3"
+      }
+    },
+    "Question_6": {
+      "type": "toc",
+      "content": {
+        "id": "mainScreen",
+        "mainQuestionArray": [
+            "رِحْلَةُ الضَّمائِرِ إِلى مَدِينَةِ الألعابِ.",
+            "انقرْ على المرحلةِ الثّانيةِ لتبدأَ بها.",
+            "انقرْ على المرحلةِ الثّالثةِ لتبدأَ بها.",
+            "انقرْ على زرِّ المَتجرِ."
+        ],
+        "mainQuestionAudioArray": [ 
+          "audio/page6/audio6_1.mp3",
+          "audio/page6/audio6_2.mp3",
+          "audio/page6/audio6_3.mp3",
+          "audio/page6/audio6_4.mp3"
+        ],
+        "slides": [
+          {
+            "id": 0,
+            "title": "البَوَّابَةُ الرّئيسةُ",
+            "ImageSource": "mainDoor",
+            "hidden": false
+          },
+          {
+            "id": 1,
+            "title": "مِنْطَقَةُ الأَلْعابِ",
+            "ImageSource": "gameZone",
+            "hidden": true
+          },
+          {
+            "id": 2,
+            "title": "التَّجَمُّعُ لِلْعَوْدَةِ",
+            "ImageSource": "gatheringZone",
+            "hidden": true
+          }
+        ]
+      }
+    },
+    "Question_7": {
+      "type": "splashScreen",
+      "content":{
+        "splashIndex":1,
+        "mainQuestionAudio": "audio/page7/audio_7_1.mp3",
+        "lessonTitle": "<div class='splashScreenText-wrapper'>المرحلةُ الأولى<div class='image-holder'><img alt='slide' class='toc-image' src='images/mainDoor.png'></div><div class='yellowText'>البَوَّابَةُ الرّئيسةُ </div></div>"
+      }
+    },
+     "Question_8": {
+      "type": "multiplechoice",
+      "content": {
+        "index": 1,
+        "gameId": 0,
+        "hintData": {
+          "hintImage":"src/container/images/hint_image.png"
+        
+        },
+          "mainQuestionAudio": "audio/page8/audio_8_1.mp3",
+        "rounds": [
+          {
+            "mainQuestion": "اِخْتَرِ الْجُمْلَةَ الَّتِي تَحْتَوِي عَلَى ضَمِيرِ رَفْعٍ مُنْفَصِلٍ.",
+            "correctAnswersArray": [
+              {
+                "text": "أَنَا مُشْرِفُ الرِّحْلَةِ."              
+              }
+            ],
+            "wrongAnswersArray": [
+              {
+                "text": "هَلْ تُشْرِفُ عَلَى الرِّحْلَةِ؟"
+              },
+              {
+                "text": "يَا مُشْرِفَ الرِّحْلَةِ! شُكْرًا لَكَ."
+              }
+            ],
+            "submitLimit": 1,
+            "feedback": {
+              "continue": "next",
+               "incorrect": {
+                "text": "الإِجَابَةُ غَيْرُ صَحِيحَةٍ.",
+                "audio": "audio/page8/audio_8_incorrect.mp3"
+              },
+              "correct": {
+                "text": "أَحْسَنْتَ! اِسْتَمِرَّ، أَنْتَ رَائِعٌ",
+                "audio": "audio/page8/audio_8_1_correct.mp3"
+              }
+            }
+          },
+          {
+            "mainQuestion": "اِخْتَرِ الْجُمْلَةَ الَّتِي تَحْتَوِي عَلَى ضَمِيرِ رَفْعٍ مُنْفَصِلٍ.",
+            "correctAnswersArray": [
+              {
+                "text": "أَنْتَ وَصَلْتَ مُتَأَخِّرًا."
+              }
+            ],
+            "wrongAnswersArray": [
+              {
+                "text": "مَنْ وَصَلَ مُتَأَخِّرًا؟"
+              },
+              {
+                "text": "يَا مُتَأَخِّرُ! أَسْرِعْ."
+              }
+            ],
+            "submitLimit": 1,
+            "feedback": {
+              "continue": "next",
+               "incorrect": {
+                "text": "الإِجَابَةُ غَيْرُ صَحِيحَةٍ.",
+                "audio": "audio/page8/audio_8_incorrect.mp3"
+              },
+              "correct": {
+                "text": "أَحْسَنْتَ! اِسْتَمِرَّ، أَنْتَ رَائِعٌ",
+                "audio": "audio/page8/audio_8_2_correct.mp3"
+              }
+            }
+          },
+          {
+            "mainQuestion": "اِخْتَرِ الْجُمْلَةَ الَّتِي تَحْتَوِي عَلَى ضَمِيرِ رَفْعٍ مُنْفَصِلٍ.",
+            "correctAnswersArray": [
+              {
+                "text": "أَنْتِ تَحْمِلِينَ تَذْكِرَةَ الدُّخولِ."
+              }
+            ],
+            "wrongAnswersArray": [
+              {
+                "text": "أَيْنَ تَذْكِرَةُ الدُّخولِ؟"
+              },
+              {
+                "text": "مَا أَغْلَى تَذْكِرَةَ الدُّخولِ!"
+              }
+            ],
+            "submitLimit": 1,
+            "feedback": {
+              "continue": "next",
+              "incorrect": {
+                "text": "الإِجَابَةُ غَيْرُ صَحِيحَةٍ.",
+                "audio": "audio/page8/audio_8_incorrect.mp3"
+              },
+              "correct": {
+                "text": "أَحْسَنْتَ! اِسْتَمِرَّ، أَنْتَ رَائِعٌ",
+                "audio": "audio/page8/audio_8_3_correct.mp3"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "Question_9": {
+      "type": "achievementScreen",
+      
+      "content":{
+        "gameId": 0,
+        "notAllCorrectText": " لم تكمل المرحلة بنجاح.",
+        "allCorrectText": " لقد أَكْمَلْتَ المرحلةَ بنجاحٍ!",
+        "allFailAudio": "audio/page9/audio_9_3.mp3",
+        "onePassAudio": "audio/page9/audio_9_2.mp3",
+        "allPassAudio": "audio/page9/audio_9_1.mp3"
+      }
+    },
+    "Question_10": {
+      "type": "splashScreen",
+      "content":{
+        "mainQuestionAudio": "audio/page10/audio10_1.mp3",
+        "splashIndex": 2,
+        "lessonTitle": "<div class='splashScreenText-wrapper'>المرحلةُ الثَّانِيَةُ<div class='image-holder'><img alt='slide' class='toc-image' src='images/gameZone.png'></div><div class='yellowText'>مِنْطَقَةُ الأَلْعابِ</div></div>"
+      }
+    },
+    "Question_11": {
+      "type": "dnd",
+      "content": {
+        "id": "mission_3",
+        "index": 2,
+        "gameId": 1,
+        "showResult": false,
+         "hintData": {
+          "hintImage":"src/container/images/hint_image.png"
+        },
+        "mainQuestion": "اِسْحَبِ الْكَلِمَةَ الصَّحِيحَةَ، وَأَدْرِجْهَا لِاسْتِكْمَالِ الْجُمْلَةِ.",
+        "characterImage": "speed",
+        "mainQuestionAudio": "audio/page11/audio_11_1.mp3",
+        "rounds": [
+          {
+            "option_id": "1",  
+            "dropText": "هُوَ @_@  في أَلْعابِ التَّصْوِيبِ.",
+            "draggableItems": [
+              { "id": "draggable-1", "type": "text", "value": "ماهِرٌ", "dataIndex": "object_1" },
+              { "id": "draggable-2", "type": "text", "value": "ماهِرونَ", "dataIndex": "object_2" },
+              { "id": "draggable-3", "type": "text", "value": "ماهِرانِ", "dataIndex": "object_3" }
+            ],  
+            "droppableItems": [
+              { "id": "droppable-1", "type": "text", "dataIndex": "object_1"}
+            ],                        
+            "submitLimit": 2,
+            "feedback": {
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page11/audio_11_incorrect.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page11/audio_11_correct_1.mp3"
+              }
+            }
+          },
+          {
+            "option_id": "2",  
+            "dropText": "هِيَ @_@ بِالتَّلْوِينِ.",
+            "draggableItems": [
+              { "id": "draggable-1", "type": "text", "value": "تَسْتَمْتِعُ", "dataIndex": "object_1" },
+              { "id": "draggable-2", "type": "text", "value": "تَسْتَمْتِعانِ", "dataIndex": "object_2" },
+              { "id": "draggable-3", "type": "text", "value": "يَسْتَمْتِعونَ", "dataIndex": "object_3" }
+            ],  
+            "droppableItems": [
+              { "id": "droppable-1", "type": "text", "dataIndex": "object_1"}
+            ],                        
+            "submitLimit": 2,
+            "feedback": {
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page11/audio_11_incorrect.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page11/audio_11_correct_2.mp3"
+              }
+            }
+          },
+          {
+            "option_id": "3",  
+            "dropText": "هُما @_@ في لُعْبَةِ السَّيَّاراتِ.",
+            "draggableItems": [
+              { "id": "draggable-1", "type": "text", "value": "يَلْعَبانِ", "dataIndex": "object_1" },
+              { "id": "draggable-2", "type": "text", "value": "يَلْعَبُ", "dataIndex": "object_2" },
+              { "id": "draggable-3", "type": "text", "value": "يَلْعَبونَ", "dataIndex": "object_3" }
+            ],  
+            "droppableItems": [
+              { "id": "droppable-1", "type": "text", "dataIndex": "object_1"}
+            ],                        
+            "submitLimit": 2,
+            "feedback": {
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page11/audio_11_incorrect.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page11/audio_11_correct_3.mp3"
+              }
+            }
+          },
+          {
+            "option_id": "4",  
+            "dropText": "هُمْ @_@ القِطارَ السّريعَ.",
+            "draggableItems": [
+              { "id": "draggable-1", "type": "text", "value": "يَرْكَبونَ", "dataIndex": "object_1" },
+              { "id": "draggable-2", "type": "text", "value": "يَرْكَبْنَ", "dataIndex": "object_2" },
+              { "id": "draggable-3", "type": "text", "value": "يَرْكَبانِ", "dataIndex": "object_3" }
+            ],  
+            "droppableItems": [
+              { "id": "droppable-1", "type": "text", "dataIndex": "object_1"}
+            ],                        
+            "submitLimit": 2,
+            "feedback": {
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page11/audio_11_incorrect.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page14/audio_11_correct_3.mp3"
+              }
+            }
+          },
+          {
+            "option_id": "5",  
+            "dropText": "هُنَّ @_@ دَوْرَهُنَّ",
+            "draggableItems": [
+              { "id": "draggable-1", "type": "text", "value": "يَنْتَظِرْنَ", "dataIndex": "object_1" },
+              { "id": "draggable-2", "type": "text", "value": "يَنْتَظِرانِ", "dataIndex": "object_2" },
+              { "id": "draggable-3", "type": "text", "value": "يَنْتَظِرُ", "dataIndex": "object_3" }
+            ],  
+            "droppableItems": [
+              { "id": "droppable-1", "type": "text", "dataIndex": "object_1"}
+            ],                        
+            "submitLimit": 2,
+            "feedback": {
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page11/audio_11_incorrect.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page11/audio_11_correct_3.mp3"
+              }
+            }
+          }
+
+        ]
+      }
+    },
+    "Question_12": {
+        "type": "achievementScreen",
+        "content":{
+          "gameId": 1,
+          "notAllCorrectText": " لم تكمل المرحلة بنجاح.",
+          "allCorrectText": " لقد أَكْمَلْتَ المرحلةَ بنجاحٍ!",
+          "allFailAudio": "audio/page12/audio_12_3.mp3",
+          "onePassAudio": "audio/page12/audio_12_2.mp3",
+          "allPassAudio": "audio/page12/audio_12_1.mp3"
+        }
+    },
+    "Question_13": {
+      "type": "splashScreen",
+      "content":{
+        "mainQuestionAudio": "audio/page13/audio13_1.mp3",
+        "splashIndex":3,
+        "lessonTitle": "<div class='splashScreenText-wrapper'> المرحلةُ الثَّالِثَةُ<div class='image-holder'><img alt='slide' class='toc-image' src='images/gatheringZone.png'></div><div class='yellowText'>التَّجَمُّعُ لِلْعَوْدَةِ</div></div>"
+      }
+    },
+      "Question_14": {
+      "type": "multiplechoice",
+      "content": {
+        "index": 1,
+        "gameId": 2,
+        "hintData": {
+          "hintImage":"src/container/images/hint_image.png"
+        },
+        
+        "rounds": [
+          { "mainQuestionAudio": "audio/page14/audio_14_1.mp3",
+            "mainQuestion": "اِقْرَأِ الْجُمْلَةَ التَّالِيَةَ، ثُمَّ انْقُرْ عَلى مَا يُعَبِّرُ عَنْها بِضَمِيرِ الْمُتَكَلِّمِ للجمعِ المؤنّثِ والمُذكّرِ.<div class='subquestionTextHolder'><div class='subquestionText'>أَنْتَ اسْتَمْتَعْتَ بِهَذَا الْيَوْمِ الرَّائِعِ.</div></div>",
+            "correctAnswersArray": [
+              {
+                "text": "نَحْنُ اسْتَمْتَعْنا بِهَذَا الْيَوْمِ الرَّائِعِ."              
+              }
+            ],
+            "wrongAnswersArray": [
+              {
+                "text": "هُمَا اسْتَمْتَعا بِهَذَا الْيَوْمِ الرَّائِعِ."
+              },
+              {
+                "text": "أَنْتُمْ اسْتَمْتَعْتُمْ بِهَذَا الْيَوْمِ الرَّائِعِ."
+              }
+            ],
+            "submitLimit": 1,
+            "feedback": {
+              "continue": "next",
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page14/audio_14_incorrect_1.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page14/audio_14_correct_1.mp3"
+              }
+            }
+          },
+          {
+           "mainQuestionAudio": "audio/page14/audio_14_2.mp3",
+            "mainQuestion": "اِقْرَأِ الْجُمْلَةَ التَّالِيَةَ، ثُمَّ انْقُرْ عَلى مَا يُعَبِّرُ عَنْهَا بِضَميرِ المُخاطَبِ للجمعِ المُذكّرِ.<div class='subquestionTextHolder'><div class='subquestionText'>أَنَا تَعَاوَنْتُ مَعَكُمْ بِشَكْلٍ جَيِّدٍ.</div></div>",
+            "correctAnswersArray": [
+              {
+                "text": "أَنْتُمْ تَعَاوَنْتُمْ مَعًا بِشَكْلٍ جَيِّدٍ."              
+              }
+            ],
+            "wrongAnswersArray": [
+              {
+                "text": "نَحْنُ تَعَاوَنَّا مَعًا بِشَكْلٍ جَيِّدٍ."
+              },
+              {
+                "text": "هُمْ تَعَاوَنُوا مَعًا بِشَكْلٍ جَيِّدٍ."
+              }
+            ],
+            "submitLimit": 1,
+            "feedback": {
+              "continue": "next",
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page14/audio_14_incorrect_2.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page14/audio_14_correct_2.mp3"
+              }
+            }
+          },
+          {
+            "mainQuestionAudio": "audio/page14/audio_14_3.mp3",
+            "mainQuestion": "اِقْرَأِ الْجُمْلَةَ التَّالِيَةَ، ثُمَّ انْقُرْ عَلَى مَا يُعَبِّرُ عَنْهَا بِضَمِيرِ الغائبِ للجَمعِ المؤنّثِ.<div class='subquestionTextHolder'><div class='subquestionText'>أَنْتُنَّ أَحْسَنْتُنَّ اتِّباعَ التَّعْلِيماتِ.</div></div>",
+            "correctAnswersArray": [
+              {
+                "text": "هُنَّ أَحْسَنَّ اتِّباعَ التَّعْلِيماتِ."              
+              }
+            ],
+            "wrongAnswersArray": [
+              {
+                "text": "هم أحسنوا اتِّباعَ التَّعْلِيماتِ."
+              },
+              {
+                "text": "نَحْنُ أَحْسَنَّا اتِّباعَ التَّعْلِيماتِ."
+              }
+            ],
+            "submitLimit": 1,
+            "feedback": {
+              "continue": "next",
+              "incorrect": {
+                "text": "",
+                "audio": "audio/page14/audio_14_incorrect_3.mp3"
+              },
+              "correct": {
+                "text": "",
+                "audio": "audio/page14/audio_14_correct_3.mp3"
+              }
+            }
+          }
+        ]
+      }
+    },
+
+    "Question_15": {
+      "type": "achievementScreen",
+      "content":{
+        "gameId": 2,
+        "notAllCorrectText": " لم تكمل المرحلة بنجاح.",
+        "allCorrectText": " لقد أَكْمَلْتَ المرحلةَ بنجاحٍ!",
+        "allFailAudio": "audio/page15/audio_15_3.mp3",
+        "onePassAudio": "audio/page15/audio_15_2.mp3",
+        "allPassAudio": "audio/page15/audio_15_1.mp3"
+      }
+    },   
+    "Question_16": {
+      "type": "resultsScreen",
+      "content":{
+        "notAllCorrectText": "ُيُمْكِنُكَ الْآنَ إِعَادَةُ الْمُحَاكَاةِ لِتَحْسِينِ أَدَائِكَ. ",
+        "allCorrectText": "رَائِعٌ! أَكْمَلْتَ الرِّحْلَةَ، وَحَصَلْتَ عَلَى جَمِيعِ الشَّارَاتِ. ",
+        "allPassAudio": "audio/page16/audio_16_2.mp3",
+        "allFailAudio": "audio/page16/audio_16_1.mp3"
+
+      }
+    }
+  }
+}
