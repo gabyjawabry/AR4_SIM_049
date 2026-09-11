@@ -94,7 +94,10 @@ const AchievementScreen = ({ parameters }) => {
 
 
   return (
-    <div className="achievementScreen-container p-0 m-0 h-100 w-100">
+
+<div className= {`achievementScreen-container p-0 m-0 h-100 w-100  achievementScreen-container_${avatarSelected}_${questionResult}`} >
+{/* 
+    <div className="achievementScreen-container p-0 m-0 h-100 w-100"> */}
       <div className="achievementScreen-content w-100">
         <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
           <ShowAvatarAndName />
