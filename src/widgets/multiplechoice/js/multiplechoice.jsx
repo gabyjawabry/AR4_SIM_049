@@ -35,6 +35,11 @@ const MultipleChoice = (props) => {
   const isVisible = useIsVisible(containerRef);
   const [currentRound, setCurrentRound] = useState(0);
   const roundData = content.rounds?.[currentRound] || {};
+  const audioData = {
+    url: roundData.mainQuestionAudio,
+    autoplay: true,
+    id: parameters.id || 0
+  };
   const [questionGrade, setQuestionGrade] = useState(0);
   const feedbackVideoRef = useRef();
   const [backgroundVideoData, setBackgroundVideoData] = useState(null);
@@ -56,30 +61,26 @@ const MultipleChoice = (props) => {
    const anim = await getAnimationAsync(`mission${gameIndex}_${avatarSelected}_question${currentRound + 1}`);
     setBackgroundVideoData(anim);
   }
-  const audioData = {
-    url: content.mainQuestionAudio,
-    autoplay: true,
-    id: parameters.id || 0
-  };
 
   useEffect(() => {
     if (!roundData) return;
 
-  const mcCorrectOptions = roundData.correctAnswersArray.map(item => ({
-    text: item.text,
-    correct: true,
-  }));
+    const mcCorrectOptions = roundData.correctAnswersArray.map(item => ({
+      text: item.text,
+      correct: true,
+    }));
 
-  const mcWrongOptions = roundData.wrongAnswersArray.map(item => ({
-    text: item.text,
-    correct: false,
-  }));
+    const mcWrongOptions = roundData.wrongAnswersArray.map(item => ({
+      text: item.text,
+      correct: false,
+    }));
 
-  const result = shuffle([...mcCorrectOptions, ...mcWrongOptions]).map((item, idx) => ({
-    id: idx + 1,
-    text: item.text,
-    correct: item.correct,
-  }));
+    const result = shuffle([...mcCorrectOptions, ...mcWrongOptions]).map((item, idx) => ({
+      id: idx + 1,
+      text: item.text,
+      correct: item.correct,
+    }));
+
     setMcOptions(result);
     setSelected(null);
     setSubmitted(false);

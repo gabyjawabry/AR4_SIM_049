@@ -73,16 +73,16 @@
       "content": {
         "id": "mainScreen",
         "mainQuestionArray": [
-            "رِحْلَةُ الضَّمائِرِ إِلى مَدِينَةِ الألعابِ.",
+            "ابدأِ المرحلةَ الأولى بالضَّغطِ عليها.",
             "انقرْ على المرحلةِ الثّانيةِ لتبدأَ بها.",
             "انقرْ على المرحلةِ الثّالثةِ لتبدأَ بها.",
-            "انقرْ على زرِّ المَتجرِ."
+            "بوركَ جُهدُكَ! والآنَ هيّا بنا نرى نتائجَ عَمَلِكَ."
         ],
         "mainQuestionAudioArray": [ 
-          "audio/page6/audio6_1.mp3",
-          "audio/page6/audio6_2.mp3",
-          "audio/page6/audio6_3.mp3",
-          "audio/page6/audio6_4.mp3"
+          "audio/page6/audio_6_1.mp3",
+          "audio/page6/audio_6_2.mp3",
+          "audio/page6/audio_6_3.mp3",
+          "audio/page6/audio_6_4.mp3"
         ],
         "slides": [
           {
@@ -121,7 +121,6 @@
         "gameId": 0,
         "hintData": {
           "hintImage":"src/container/images/hint_image.png"
-        
         },
           "mainQuestionAudio": "audio/page8/audio_8_1.mp3",
         "rounds": [
@@ -227,7 +226,7 @@
     "Question_10": {
       "type": "splashScreen",
       "content":{
-        "mainQuestionAudio": "audio/page10/audio10_1.mp3",
+        "mainQuestionAudio": "audio/page10/audio_10_1.mp3",
         "splashIndex": 2,
         "lessonTitle": "<div class='splashScreenText-wrapper'>المرحلةُ الثَّانِيَةُ<div class='image-holder'><img alt='slide' class='toc-image' src='images/gameZone.png'></div><div class='yellowText'>مِنْطَقَةُ الأَلْعابِ</div></div>"
       }
@@ -379,7 +378,7 @@
     "Question_13": {
       "type": "splashScreen",
       "content":{
-        "mainQuestionAudio": "audio/page13/audio13_1.mp3",
+        "mainQuestionAudio": "audio/page13/audio_13_1.mp3",
         "splashIndex":3,
         "lessonTitle": "<div class='splashScreenText-wrapper'> المرحلةُ الثَّالِثَةُ<div class='image-holder'><img alt='slide' class='toc-image' src='images/gatheringZone.png'></div><div class='yellowText'>التَّجَمُّعُ لِلْعَوْدَةِ</div></div>"
       }
