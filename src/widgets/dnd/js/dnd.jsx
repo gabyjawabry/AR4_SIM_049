@@ -684,7 +684,6 @@ const dnd = ({ parameters, index }) => {
 							src={backgroundVideoData} 
 							poster={new URL(`../../../container/videos/mission${content.gameId}_${posterPart}_poster.png`, import.meta.url).href}
 							autoPlay
-							autoPlay
 							muted
 							playsInline
 						/>
