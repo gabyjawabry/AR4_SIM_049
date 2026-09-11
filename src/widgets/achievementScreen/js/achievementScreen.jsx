@@ -92,51 +92,42 @@ const AchievementScreen = ({ parameters }) => {
     //   controls.start("animate");
   }, [isVisible, achievementAudio, controls]);
 
-
   return (
-
-<div className= {`achievementScreen-container p-0 m-0 h-100 w-100  achievementScreen-container_${avatarSelected}_${questionResult}`} >
-{/* 
-    <div className="achievementScreen-container p-0 m-0 h-100 w-100"> */}
-      <div className="achievementScreen-content w-100">
-        <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
-          <ShowAvatarAndName />
-          {/* <ShowScoring /> */}
-        </motion.div> 
-         <motion.div ref={containerRef} className="achievementScreen-container p-0 m-0 h-100 w-100" {...getAnimation("fade", 0.4, 0)} initial="initial" animate={controls}>
-
-         {backgroundVideoData && 
-          <video ref={backgroundVideoRef} 
-            className="videoSplashScreen" 
-            src={backgroundVideoData} 
-            poster={new URL(`../../../container/videos/Mission0${gameIndex}_${avatarSelected}_${questionResult}_thumbnail.png`, import.meta.url).href}  
-            autoPlay  
-            muted  
-            playsInline
-            loop
-          />      
-        }
-        <motion.div  {...getAnimation("bounceInTop", 0.4, 1)}  className={`lessonTitleHolder ${content.last ? "last" : ""}`}>
-          <div className="achievementScreen-content-wrapper">
-            <motion.div  {...getAnimation("rotateZoomIn", 0.8, 1)}  className="teamImageMainDiv">
-              <img  src={achievementImage}  alt={finalQuestionAnswer === 2 ? "mission_success" : "mission_fail"  }/>
+    <div className= {`achievementScreen-container p-0 m-0 h-100 w-100  achievementScreen-container_${avatarSelected}_${questionResult}`} >
+        <div className="achievementScreen-content w-100">
+          <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
+            <ShowAvatarAndName />
+          </motion.div> 
+          <motion.div ref={containerRef} className="achievementScreen-container p-0 m-0 h-100 w-100" variants={getAnimation("fade", 0.4, 0)} initial="initial" animate={controls}>
+            {backgroundVideoData && 
+              <video ref={backgroundVideoRef} 
+                className="videoSplashScreen" 
+                src={backgroundVideoData} 
+                poster={new URL(`../../../container/videos/Mission0${gameIndex}_${avatarSelected}_${questionResult}_thumbnail.png`, import.meta.url).href}  
+                autoPlay  
+                muted  
+                playsInline
+                loop
+              />      
+            }
+            <motion.div  variants={getAnimation("bounceInTop", 0.4, 1)} initial="initial" animate={controls} className={`lessonTitleHolder ${content.last ? "last" : ""}`}>
+              <div className="achievementScreen-content-wrapper">
+                <motion.div variants={getAnimation("rotateZoomIn", 0.8, 1)} initial="initial" animate={controls} className="teamImageMainDiv">
+                  <img src={achievementImage}  alt={finalQuestionAnswer === 2 ? "mission_success" : "mission_fail"  }/>
+                </motion.div>
+                <div className="achievementScreen-content-titles">
+                  <motion.div  variants={getAnimation("expandIn", 0.8, 1)} initial="initial" animate={controls} className="lessonTitle"  dangerouslySetInnerHTML={{ __html: achievementText,  }}/>
+                </div>
+                <motion.div className="startLessonBtnHolder" variants={getAnimation("scaleIn", 0.4, 1)} initial="initial" animate={controls}>
+                    <button className="startLessonBtn" onClick={handleStartAnimations}>
+                      <FormattedMessage id='feedback.continue' />
+                    </button>
+                </motion.div>
+              </div>
             </motion.div>
-            <div className="achievementScreen-content-titles">
-              <motion.div  {...getAnimation("expandIn", 0.8, 1)}  className="lessonTitle"  dangerouslySetInnerHTML={{ __html: achievementText,  }}/>
-            </div>
-            <motion.div className="startLessonBtnHolder" {...getAnimation("scaleIn", 0.4, 1)}>
-                <button className="startLessonBtn" onClick={handleStartAnimations}>
-                  <FormattedMessage id='feedback.continue' />
-                </button>
-              </motion.div>
-          </div>
-        </motion.div>
-     
-
-      </motion.div>
+          </motion.div>
+      </div>
     </div>
-  </div>
-    
   );
 };
 
