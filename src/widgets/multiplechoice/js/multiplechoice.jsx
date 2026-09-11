@@ -202,7 +202,7 @@ const MultipleChoice = (props) => {
   }, [isVisible, currentRound]); 
 
   return (
-    <div className="mc-container w-100 component-container">
+    <div className= {`mc-container w-100 component-container mc-game-container_${avatarSelected}`} >
       <HintButton
         hintData={content.hintData}
         setHintData={setHintData}
@@ -212,7 +212,7 @@ const MultipleChoice = (props) => {
 					<ShowAvatarAndName />
 					{/* <ShowScoring /> */}
 				</motion.div> 
-        <div className="mc-game-container">
+        <div className= "mc-game-container">
           <motion.div className="mainQuestionHolderDiv">
             <motion.div className="mainQuestionHolder" variants={getAnimation("slideDown", 0.6, 0.4)} initial="initial" animate={controls}>
               <Row className="audio-help-container mb-0 mx-0">
@@ -313,7 +313,7 @@ const MultipleChoice = (props) => {
               ref={backgroundVideoRef}
               className="videoSplashScreen"
               src={backgroundVideoData}
-              poster={new URL(`../../../container/videos/mission${gameIndex}_${avatarSelected}_question${currentRound + 1}_thumbnail.png`, import.meta.url).href}
+              poster={new URL(`../../../container/videos/Mission0${gameIndex}_${avatarSelected}_question${currentRound + 1}_thumbnail.png`, import.meta.url).href}
               autoPlay  
               muted  
               playsInline

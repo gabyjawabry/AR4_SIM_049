@@ -553,7 +553,7 @@ const dnd = ({ parameters, index }) => {
  	}
 
 	return ( 
-		<div className="dnd-container component-container w-100" style={{ backgroundImage: `url(images/toc_bg.png)`,}}>
+		<div className= {`dnd-container w-100 component-container dnd-game-container_${avatarSelected}`} >
 			<HintButton
         		hintData={content.hintData}
        			setHintData={setHintData}
@@ -682,7 +682,7 @@ const dnd = ({ parameters, index }) => {
 						<video ref={backgroundVideoRef} 
 							className="videoSplashScreen" 
 							src={backgroundVideoData} 
-							poster={new URL(`../../../container/videos/mission${content.gameId}_${posterPart}_poster.png`, import.meta.url).href}
+							poster={new URL(`../../../container/videos/Mission0${content.gameId}_${posterPart}_poster.png`, import.meta.url).href}
 							autoPlay
 							muted
 							playsInline

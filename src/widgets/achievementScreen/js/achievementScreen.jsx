@@ -5,6 +5,8 @@ import { FormattedMessage } from "react-intl";
 import {getAnimation, useIsVisible} from "../../../container/js/utilities/utilities";
 import { getAnimationAsync } from '../../../container/js/utilities/helper.jsx';
 import { PageContext } from "../../../container/js/utilities/context";
+import ShowAvatarAndName from '../../../container/js/showAvatarAndName.jsx';
+
 import mission1_success from "../images/mission1_success.png";
 import mission2_success from "../images/mission2_success.png";
 import mission3_success from "../images/mission3_success.png";
@@ -92,8 +94,14 @@ const AchievementScreen = ({ parameters }) => {
 
 
   return (
-    <motion.div ref={containerRef} className="achievementScreen-container p-0 m-0 h-100 w-100" {...getAnimation("fade", 0.4, 0)} initial="initial" animate={controls}>
+    <div className="achievementScreen-container p-0 m-0 h-100 w-100">
       <div className="achievementScreen-content w-100">
+        <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
+          <ShowAvatarAndName />
+          {/* <ShowScoring /> */}
+        </motion.div> 
+         <motion.div ref={containerRef} className="achievementScreen-container p-0 m-0 h-100 w-100" {...getAnimation("fade", 0.4, 0)} initial="initial" animate={controls}>
+
          {backgroundVideoData && 
           <video ref={backgroundVideoRef} 
             className="videoSplashScreen" 
@@ -122,9 +130,10 @@ const AchievementScreen = ({ parameters }) => {
         </motion.div>
      
 
-
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
+  </div>
+    
   );
 };
 

@@ -11,7 +11,7 @@ import "../css/toc.scss";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
-
+import ShowAvatarAndName from '../../../container/js/showAvatarAndName.jsx';
 import Lottie from "lottie-react";
 
 import ScreenOpenSFX from "../sounds/screen_open.mp3";
@@ -137,6 +137,10 @@ const TOC = (props) => {
           </motion.div>
         </motion.div>
       <motion.div ref={containerRef} className="toc-container w-100 h-100 d-flex flex-column align-items-center">
+        <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
+					<ShowAvatarAndName />
+					{/* <ShowScoring /> */}
+				</motion.div> 
         <div className="toc-slides-holder w-100 d-flex flex-row align-items-center justify-content-center"
           style={{ pointerEvents: animationsCompleted ? "auto" : "none",}}>
           {slidesData.map((slide, slideIndex) => {

@@ -1,3 +1,8 @@
+    #Main_Slide-11  .dnd-game-container_avatar01, #Main_Slide-11  .dnd-game-container_avatar02
+ {
+    background-image: url(../images/Mission02_question1_thumbnail.png);
+}
+   
    .dnd-content {
     height: 100%;
     display: flex;
@@ -21,7 +26,7 @@
                 border: 3px solid #00b7ec;
             }   
             .droppable-inline {
-                width: 150px;
+                width: 184px;
                 height: 64px;
                 margin: 0 10px;
                 display: inline-flex;
@@ -154,7 +159,7 @@
     height: 100%;
 }
 .draggable-item {
-    width: 150px;
+    width: 184px;
     height: 65px;
     display: flex;
     align-content: center;
@@ -515,7 +520,7 @@ margin: 30px 0 !important;
 }
 #Main_Slide-14{
     .mc-game-container {
-        width: 1090px;
+        width: 940px;
         min-height: 695px;
     }
     .mainQuestionHolderDiv {
@@ -529,6 +534,7 @@ margin: 30px 0 !important;
     height: 76px;
     background-color: #f2e5f7;
     display: flex;
+    color: #452b74;
 }
 .subquestionTextHolder {
     display: flex;
@@ -544,6 +550,9 @@ margin: 30px 0 !important;
 .round-progress {
     bottom: 78px;
     width: 487px;
-        right: 302px;
+        right: 225px;
+}
+.mc-game-container .feedback-container-holder {
+    height: 131px;
 }
 }
