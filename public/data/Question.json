@@ -120,7 +120,7 @@
         "index": 1,
         "gameId": 0,
         "hintData": {
-          "hintImage":"src/container/images/hint_image.png"
+          "hintImage":"images/hint_image.png"
         },
           "mainQuestionAudio": "audio/page8/audio_8_1.mp3",
         "rounds": [
@@ -239,7 +239,7 @@
         "gameId": 1,
         "showResult": false,
          "hintData": {
-          "hintImage":"src/container/images/hint_image.png"
+          "hintImage":"images/hint_image.png"
         },
         "mainQuestion": "اِسْحَبِ الْكَلِمَةَ الصَّحِيحَةَ، وَأَدْرِجْهَا لِاسْتِكْمَالِ الْجُمْلَةِ.",
         "characterImage": "speed",
@@ -389,7 +389,7 @@
         "index": 1,
         "gameId": 2,
         "hintData": {
-          "hintImage":"src/container/images/hint_image.png"
+          "hintImage":"images/hint_image.png"
         },
         
         "rounds": [
