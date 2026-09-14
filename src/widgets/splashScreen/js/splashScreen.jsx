@@ -18,7 +18,14 @@ const SplashScreen = ({parameters}) => {
   const videoPlayerRef = useRef();
   const backgroundVideoRef = useRef();
   let timer = useRef(null);
-  
+  const thumbnails = import.meta.glob(
+  "../../../container/videos/*_thumbnail.png",
+  {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }
+);
   const handleStartAnimations = () => {
       stopAudio();
       clearTimeout(timer.current);
@@ -43,9 +50,15 @@ const SplashScreen = ({parameters}) => {
       controls.start("initial");
     }
   }, [isVisible]);
-
+  const thumbnailName = `Mission0${content.splashIndex}_splashScreen_thumbnail.png`;
+  const thumbnail = Object.entries(thumbnails).find(
+    ([path]) => path.endsWith(thumbnailName)
+  )?.[1];
   return (
-    <div className="splashScreen-container p-0 m-0 h-100 w-100">
+    <div className="splashScreen-container p-0 m-0 h-100 w-100" 
+      style={{
+      backgroundImage: thumbnail ? `url("${thumbnail}")` : "none",
+    }}>
       <div className="splashScreen-content w-100">
         <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
           <ShowAvatarAndName />

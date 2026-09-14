@@ -57,6 +57,14 @@ const MultipleChoice = (props) => {
         answer: null,
       }))
   );
+  const thumbnails = import.meta.glob(
+  "../../../container/videos/*_thumbnail.png",
+  {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }
+);
   async function loadBackgroundVideo() {  
    const anim = await getAnimationAsync(`mission${gameIndex}_${avatarSelected}_question${currentRound + 1}`);
     setBackgroundVideoData(anim);
@@ -200,9 +208,15 @@ const MultipleChoice = (props) => {
       controls.start("initial");
     }
   }, [isVisible, currentRound]); 
-
+const thumbnailName = `Mission0${gameIndex}_${avatarSelected}_question${currentRound + 1}_thumbnail.png`;
+const thumbnail = Object.entries(thumbnails).find(
+  ([path]) => path.endsWith(thumbnailName)
+)?.[1];
   return (
-    <div className= {`mc-container w-100 component-container mc-game-container_${avatarSelected}`} >
+    <div className= {`mc-container w-100 component-container mc-game-container_${avatarSelected}`}  
+      style={{
+        backgroundImage: thumbnail ? `url("${thumbnail}")` : "none",
+      }}>
       <HintButton
         hintData={content.hintData}
         setHintData={setHintData}

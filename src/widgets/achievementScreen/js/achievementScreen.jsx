@@ -28,6 +28,14 @@ const AchievementScreen = ({ parameters }) => {
   const [startAnimation, setStartAnimation] = useState(false);
   const [backgroundVideoData, setbackgroundVideoData] = useState(null);
   const backgroundVideoRef = useRef();
+  const thumbnails = import.meta.glob(
+  "../../../container/videos/*_thumbnail.png",
+  {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }
+);
   let timer = useRef(null);
   let achievementAudio = "";
   let achievementText = "";
@@ -91,9 +99,14 @@ const AchievementScreen = ({ parameters }) => {
 
     //   controls.start("animate");
   }, [isVisible, achievementAudio, controls]);
-
+const thumbnailName = `Mission0${gameIndex}_${avatarSelected}_${questionResult}_thumbnail.png`;
+const thumbnail = Object.entries(thumbnails).find(
+  ([path]) => path.endsWith(thumbnailName)
+)?.[1];
   return (
-    <div className= {`achievementScreen-container p-0 m-0 h-100 w-100  achievementScreen-container_${avatarSelected}_${questionResult}`} >
+    <div className= {`achievementScreen-container p-0 m-0 h-100 w-100  achievementScreen-container_${avatarSelected}_${questionResult}`}   style={{
+    backgroundImage: thumbnail ? `url("${thumbnail}")` : "none",
+  }}>
         <div className="achievementScreen-content w-100">
           <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
             <ShowAvatarAndName />

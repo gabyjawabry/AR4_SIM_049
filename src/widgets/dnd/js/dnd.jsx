@@ -128,7 +128,14 @@ const dnd = ({ parameters, index }) => {
         answer: null,
       }))
   );
-
+const thumbnails = import.meta.glob(
+  "../../../container/videos/*_thumbnail.png",
+  {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }
+);
 	useEffect(() => {
 		async function loadBackgroundVideo() {
 			const anim = await getAnimationAsync(`mission${gameIndex}_question${currentRound + 1}`);
@@ -551,9 +558,16 @@ const dnd = ({ parameters, index }) => {
 		pageContext.setTocState(nextTocState);
 		saveWidgetState(pageContext, "mainScreen", { tocState: nextTocState });
  	}
-
+	const questionPart = currentRound === 0 ? `1` : currentRound === 1 ? 2 : 3;
+	const posterPart = content.rounds?.length === 1 ? avatarSelected : `question${questionPart}`;
+	const thumbnailName = `Mission0${content.gameId + 1}_${posterPart}_thumbnail.png`;
+	const thumbnail = Object.entries(thumbnails).find(
+	([path]) => path.endsWith(thumbnailName)
+	)?.[1];
 	return ( 
-		<div className= {`dnd-container w-100 component-container dnd-game-container_${avatarSelected}`} >
+		<div className= {`dnd-container w-100 component-container dnd-game-container_${avatarSelected}`}   style={{
+    		backgroundImage: thumbnail ? `url("${thumbnail}")` : "none",
+ 		}}>
 			<HintButton
         		hintData={content.hintData}
        			setHintData={setHintData}
@@ -676,13 +690,11 @@ const dnd = ({ parameters, index }) => {
 			</motion.div>
 			{backgroundVideoData && 
 				(() => {
-					const questionPart = currentRound === 0 ? `1_${avatarSelected}` : currentRound === 1 ? 2 : 3;
-					const posterPart = content.rounds?.length === 1 ? avatarSelected : `question${questionPart}`;
 					return (
 						<video ref={backgroundVideoRef} 
 							className="videoSplashScreen" 
 							src={backgroundVideoData} 
-							poster={new URL(`../../../container/videos/Mission0${content.gameId}_${posterPart}_poster.png`, import.meta.url).href}
+							poster={new URL(`../../../container/videos/Mission0${content.gameId + 1}_${posterPart}_poster.png`, import.meta.url).href}
 							autoPlay
 							muted
 							playsInline
