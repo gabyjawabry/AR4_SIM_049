@@ -112,7 +112,6 @@ const dnd = ({ parameters, index }) => {
 	const [showDraggables, setShowDraggables] = useState(false);
 	const [hintData, setHintData] = useState('');
 	const droppableRefs = useRef([]);
-	const gameIndex = content.gameId + 1;
 	const feedbackSubmitButtonRef = useRef();
 	const startTime = useRef(null);
 	// const dndData = content.rounds[currentRound];
@@ -120,6 +119,7 @@ const dnd = ({ parameters, index }) => {
 	const [withExplanationScreen, setWithExplanationScreen] = useState(content.withExplanationScreen || false);
 	const backgroundVideoRef = useRef();
 	const animationBranchKey = withExplanationScreen ? "explanation" : "game";
+	const gameIndex = content.gameId + 1;
 	  const [questionAnswers, setQuestionAnswers] = useState(
     () =>
       (content.rounds || []).map((_, index) => ({
@@ -558,9 +558,9 @@ const thumbnails = import.meta.glob(
 		pageContext.setTocState(nextTocState);
 		saveWidgetState(pageContext, "mainScreen", { tocState: nextTocState });
  	}
-	const questionPart = currentRound === 0 ? `1` : currentRound === 1 ? 2 : 3;
+	const questionPart = currentRound + 1;
 	const posterPart = content.rounds?.length === 1 ? avatarSelected : `question${questionPart}`;
-	const thumbnailName = `Mission0${content.gameId + 1}_${posterPart}_thumbnail.png`;
+	const thumbnailName = `Mission0${gameIndex}_${posterPart}_thumbnail.png`;
 	const thumbnail = Object.entries(thumbnails).find(
 	([path]) => path.endsWith(thumbnailName)
 	)?.[1];
@@ -694,7 +694,7 @@ const thumbnails = import.meta.glob(
 						<video ref={backgroundVideoRef} 
 							className="videoSplashScreen" 
 							src={backgroundVideoData} 
-							poster={new URL(`../../../container/videos/Mission0${content.gameId + 1}_${posterPart}_poster.png`, import.meta.url).href}
+							poster={new URL(`../../../container/videos/Mission0${gameIndex}_${posterPart}_thumbnail.png`, import.meta.url).href}
 							autoPlay
 							muted
 							playsInline
