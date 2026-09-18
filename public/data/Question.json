@@ -64,8 +64,7 @@
     "Question_5": {
       "type": "avatarPage",
       "content": {
-        "mainQuestion": "اختيارٌ موفَّقٌ",
-        "mainQuestionAudio": "audio/page5/audio_5_1.mp3"
+        "mainQuestion": "اختيارٌ موفَّقٌ"
       }
     },
     "Question_6": {
