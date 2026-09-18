@@ -328,12 +328,12 @@ button.show-hint-button,button.show-hint-button:hover ,button.show-hint-button:a
     border-radius: 50%;
     z-index: 1;
     padding: 0;
-    background-color: #ffd229;
-    border: 4px solid #fff;
+    background-color: #ffd229 !important;
+    border: 4px solid #fff !important;
     transition: all 0.2s ease;
     z-index: 7777;
     /* border-radius: 15px; */
-    color: #664000;
+    color: #664000 !important;
     font-size: 44px;
     display: flex;
     align-items: center;

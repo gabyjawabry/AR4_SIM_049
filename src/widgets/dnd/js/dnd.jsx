@@ -697,6 +697,7 @@ const thumbnails = import.meta.glob(
 							poster={new URL(`../../../container/videos/Mission0${gameIndex}_${posterPart}_thumbnail.png`, import.meta.url).href}
 							autoPlay
 							muted
+							loop
 							playsInline
 						/>
 					);

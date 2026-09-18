@@ -108,9 +108,9 @@ const thumbnail = Object.entries(thumbnails).find(
     backgroundImage: thumbnail ? `url("${thumbnail}")` : "none",
   }}>
         <div className="achievementScreen-content w-100">
-          <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
+          {/* <motion.div className="avatarAndScore" variants={getAnimation("flipX", 0.6, 0.4)} initial="initial" animate={controls}>
             <ShowAvatarAndName />
-          </motion.div> 
+          </motion.div>  */}
           <motion.div ref={containerRef} className="achievementScreen-container p-0 m-0 h-100 w-100" variants={getAnimation("fade", 0.4, 0)} initial="initial" animate={controls}>
             {backgroundVideoData && 
               <video ref={backgroundVideoRef} 

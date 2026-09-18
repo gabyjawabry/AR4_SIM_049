@@ -119,12 +119,14 @@
         "index": 1,
         "gameId": 0,
         "hintData": {
-          "hintImage":"images/hint_image.png"
+          "hintImage":"images/hint_image.png",
+          "hintAudio":"audio/audio_hint.mp3"
         },
-          "mainQuestionAudio": "audio/page8/audio_8_1.mp3",
+        
         "rounds": [
           {
             "mainQuestion": "اِخْتَرِ الْجُمْلَةَ الَّتِي تَحْتَوِي عَلَى ضَمِيرِ رَفْعٍ مُنْفَصِلٍ.",
+            "mainQuestionAudio": "audio/page8/audio_8_1.mp3",
             "correctAnswersArray": [
               {
                 "text": "أَنَا مُشْرِفُ الرِّحْلَةِ."              
@@ -153,6 +155,7 @@
           },
           {
             "mainQuestion": "اِخْتَرِ الْجُمْلَةَ الَّتِي تَحْتَوِي عَلَى ضَمِيرِ رَفْعٍ مُنْفَصِلٍ.",
+            "mainQuestionAudio": "audio/page8/audio_8_1.mp3",
             "correctAnswersArray": [
               {
                 "text": "أَنْتَ وَصَلْتَ مُتَأَخِّرًا."
@@ -181,6 +184,7 @@
           },
           {
             "mainQuestion": "اِخْتَرِ الْجُمْلَةَ الَّتِي تَحْتَوِي عَلَى ضَمِيرِ رَفْعٍ مُنْفَصِلٍ.",
+            "mainQuestionAudio": "audio/page8/audio_8_1.mp3",
             "correctAnswersArray": [
               {
                 "text": "أَنْتِ تَحْمِلِينَ تَذْكِرَةَ الدُّخولِ."
@@ -212,10 +216,9 @@
     },
     "Question_9": {
       "type": "achievementScreen",
-      
       "content":{
         "gameId": 0,
-        "notAllCorrectText": " لم تكمل المرحلة بنجاح.",
+        "notAllCorrectText": "لم تُكملِ المرحلةَ بنجاحٍ!",
         "allCorrectText": " لقد أَكْمَلْتَ المرحلةَ بنجاحٍ!",
         "allFailAudio": "audio/page9/audio_9_3.mp3",
         "onePassAudio": "audio/page9/audio_9_2.mp3",
@@ -238,7 +241,8 @@
         "gameId": 1,
         "showResult": false,
          "hintData": {
-          "hintImage":"images/hint_image.png"
+          "hintImage":"images/hint_image.png",
+          "hintAudio":"audio/audio_hint.mp3"
         },
         "mainQuestion": "اِسْحَبِ الْكَلِمَةَ الصَّحِيحَةَ، وَأَدْرِجْهَا لِاسْتِكْمَالِ الْجُمْلَةِ.",
         "characterImage": "speed",
@@ -338,7 +342,7 @@
           },
           {
             "option_id": "5",  
-            "dropText": "هُنَّ @_@ دَوْرَهُنَّ",
+            "dropText": "هُنَّ @_@ دَوْرَهُنَّ.",
             "draggableItems": [
               { "id": "draggable-1", "type": "text", "value": "يَنْتَظِرْنَ", "dataIndex": "object_1" },
               { "id": "draggable-2", "type": "text", "value": "يَنْتَظِرانِ", "dataIndex": "object_2" },
@@ -367,7 +371,7 @@
         "type": "achievementScreen",
         "content":{
           "gameId": 1,
-          "notAllCorrectText": " لم تكمل المرحلة بنجاح.",
+          "notAllCorrectText": "لم تُكملِ المرحلةَ بنجاحٍ!",
           "allCorrectText": " لقد أَكْمَلْتَ المرحلةَ بنجاحٍ!",
           "allFailAudio": "audio/page12/audio_12_3.mp3",
           "onePassAudio": "audio/page12/audio_12_2.mp3",
@@ -388,7 +392,8 @@
         "index": 1,
         "gameId": 2,
         "hintData": {
-          "hintImage":"images/hint_image.png"
+          "hintImage":"images/hint_image.png",
+          "hintAudio":"audio/audio_hint.mp3"
         },
         
         "rounds": [
@@ -486,7 +491,7 @@
       "type": "achievementScreen",
       "content":{
         "gameId": 2,
-        "notAllCorrectText": " لم تكمل المرحلة بنجاح.",
+        "notAllCorrectText": "لم تُكملِ المرحلةَ بنجاحٍ!",
         "allCorrectText": " لقد أَكْمَلْتَ المرحلةَ بنجاحٍ!",
         "allFailAudio": "audio/page15/audio_15_3.mp3",
         "onePassAudio": "audio/page15/audio_15_2.mp3",
